@@ -3,10 +3,10 @@ const express = require('express');
 const router = express.Router();
 const pathPrefix = '/news';
 
-const newsHandler = require('./newsHandler');
+const { news } = require('./newsHandler');
 
 router.get('/', (req, res) => {
-  res.sendStatus(200);
+  res.send(news);
 });
 
 module.exports = { router, pathPrefix };
