@@ -1,0 +1,16 @@
+{
+    "current": [
+        {
+            "location": "Beer Sheva",
+            "temperature": "30"
+        },
+        {
+            "location": "Beer Sheva",
+            "temperature": "29"
+        }
+    ],
+    "weekly": [
+        ["30","29","27","32","26","25","24"],
+        ["29","28","26","33","25","24","23"]
+    ]
+}

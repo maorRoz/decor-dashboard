@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 import News from './news';
+import Weather from './weather';
+import Subscribe from './subscribe';
 
 const Tile = ({ headline, context }) => (
   <div>
@@ -19,7 +21,7 @@ class Dashboard extends Component {
             <Tile headline={'News Update'} context={<News news={news}/>}/>
           </Grid.Column>
           <Grid.Column>
-            <Tile headline={'Weather'}/>
+            <Tile headline={'Weather'} context={<Weather/>}/>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -30,7 +32,7 @@ class Dashboard extends Component {
             <Tile headline={'Sports'}/>
           </Grid.Column>
           <Grid.Column width={4}>
-            <Tile headline={'Subscribe'}/>
+            <Tile headline={'Subscribe For Updates'} context={<Subscribe/>}/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
