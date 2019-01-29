@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 import { Button, Form }from 'semantic-ui-react';
-import { submitEmailForUpdates } from '../../API';
+import './subscribe.css';
+
+const SubscribeForm = ({ handleSubmit, handleChange, error }) => (
+  <Form onSubmit={handleSubmit}>
+    <Form.Input className={error ? 'shaker' : ''}
+      label='Email' error={error} placeholder='your@email.com' onChange={handleChange} />
+    <Button type='submit'>SEND</Button>
+  </Form>
+);
+
+const Subscribed = () => {
+  const email = localStorage.getItem('email');
+  return (
+    <div>Thanks for signing up! you'll get your updates for the following address: {email}</div>
+  );
+};
 
 class Subscribe extends Component {
   constructor(props){
     super(props);
-    this.state = { email: '' };
+    this.state = { email: '', error: false, showForm : !localStorage.getItem('email') };
   }
 
   handleChange = (event) => {
@@ -15,17 +30,21 @@ class Subscribe extends Component {
   handleSubmit = async (event) => {
     const { onSubmit } = this.props;
     const { email } = this.state;
-    onSubmit(email);
+    if(email.length > 0){
+      onSubmit(email);
+      localStorage.setItem('email', email);
+      this.setState({ showForm: false, error: false });
+    } else {
+      this.setState({ error: true });
+    }
     event.preventDefault();
   };
 
   render(){
-    return(
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Input label='Email' placeholder='your@email.com' onChange={this.handleChange} />
-        <Button type='submit'>SEND</Button>
-      </Form>
-    );
+    const { showForm, error } = this.state;
+    return showForm
+      ? <SubscribeForm handleSubmit={this.handleSubmit} handleChange={this.handleChange} error={error} />
+      : <Subscribed/>;
   }
 }
 

@@ -17,7 +17,7 @@ class Dashboard extends Component {
     return (
       <Grid celled>
         <Grid.Row>
-          <Grid.Column width={6}>
+          <Grid.Column width={5}>
             <Tile headline={'News Update'} context={<News news={news}/>}/>
           </Grid.Column>
           <Grid.Column>
@@ -31,8 +31,8 @@ class Dashboard extends Component {
           <Grid.Column width={5}>
             <Tile headline={'Sports'}/>
           </Grid.Column>
-          <Grid.Column width={4}>
-            <Tile headline={'Subscribe For Updates'} context={<Subscribe onSubmit={onSubmit}/>}/>
+          <Grid.Column width={5}>
+            <Tile headline={'Subscribe For Updates'} context={<Subscribe onSubmit={onSubmit} />}/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
