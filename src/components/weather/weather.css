@@ -1,0 +1,19 @@
+.weatherText div{
+    margin-top: 100px;
+}
+
+.currentWeather div {
+    display: inline-block;
+    vertical-align:bottom;
+}
+
+.currentWeather p{
+    margin-left: 50px;
+    margin-right: -50px;
+    font-size: 150%;
+    margin-bottom:0;
+}
+
+.currentWeather img{
+    height: 200px;
+}

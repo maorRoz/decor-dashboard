@@ -1,0 +1,18 @@
+.sports {
+    text-align: center;
+}
+
+.scores {
+    margin-right: 10%;
+    margin-left: 10%;
+    display: inline-block;
+    font-size: 300%;
+}
+
+.scores span {
+    margin-bottom: 10px
+}
+
+.teamIcon {
+    display: inline-block; 
+}

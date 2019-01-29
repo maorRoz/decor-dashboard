@@ -1,5 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
+import './App.css';
 
 import subscribe from './socket';
 

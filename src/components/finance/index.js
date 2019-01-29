@@ -15,21 +15,21 @@ class Finance extends Component {
     const { x, y, data } = financeData ? this.getChart(financeData) : {};
     return (
       <Chart
-  width={'95%'}
-  height={'100%'}
-  chartType='LineChart'
-  loader={<div>Loading Chart...</div>}
-  data={data}
-  options={{
-    hAxis: {
-      title: x
-    },
-    vAxis: {
-      title: y
-    }
-  }}
-  rootProps={{ chartId: '1' }}
-/>);
+        width={'95%'}
+        height={'100%'}
+        chartType='LineChart'
+        loader={<div>Loading Chart...</div>}
+        data={data}
+        options={{
+          hAxis: {
+            title: x
+          },
+          vAxis: {
+            title: y
+          }
+        }}
+      />
+    );
   }
 }
 

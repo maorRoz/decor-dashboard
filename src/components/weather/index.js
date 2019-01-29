@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './weather.css';
 import Moment from 'moment';
 import sun from './sun.png';
 
@@ -13,12 +14,21 @@ class Weather extends Component {
     const { weather } = this.props;
     const { location, temperature } = weather ? this.currentWeather(weather) : {};
     const currentTime = new Moment().format('HH:mm');
-    return(<div>
-      <p>{temperature}C</p>
-      <p>{location}</p>
-      <img src={sun} alt='sun' />
-      <div>last updated: {currentTime}</div>
-    </div>);
+    return(
+      <div>
+        <div className='currentWeather'>
+          <div className='weatherText'>
+            <p>{temperature}C</p>
+            <p>{location}</p>
+            <div />
+          </div>
+          <div>
+            <img src={sun} alt='sun' />
+          </div>
+        </div>
+        <div>last updated: {currentTime}</div>
+      </div>
+    );
   }
 }
 

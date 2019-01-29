@@ -1,7 +1,7 @@
 {
     "x": "Years",
     "y": "(Index)",
-    "columns": ["Year", "Company1", "Company2"],
+    "columns": ["Year", "A", "B"],
     "data": [
         [
             ["2015", 1200,1500],
