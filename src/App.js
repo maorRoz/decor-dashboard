@@ -3,20 +3,22 @@ import React, { Component } from 'react';
 
 import subscribe from './socket';
 
-import { getNews, getScores, submitEmailForUpdates } from './API';
+import { getNews, getWeather, getFinance, getScores, submitEmailForUpdates } from './API';
 
 import Dashboard from './components/Dashboard';
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = { news: {}, weather: {}, finance: {}, scores: {} };
+    this.state = { news: {}, scores: {} };
   }
 
   async componentDidMount(){
     const news = await getNews();
+    const weather = await getWeather();
+    const finance = await getFinance();
     const scores = await getScores();
-    this.setState({ news, scores });
+    this.setState({ news, weather, finance, scores });
     subscribe(this);
   }
 

@@ -13,12 +13,11 @@ socket.on('weatherUpdate', (weather) => {
   currentSubscriber.setState({ weather });
 });
 
-socket.on('weatherUpdate', (finance) => {
+socket.on('financeUpdate', (finance) => {
   currentSubscriber.setState({ finance });
 });
 
 socket.on('sportsUpdate', (scores) => {
-  console.log(scores);
   currentSubscriber.setState({ scores });
 });
 
