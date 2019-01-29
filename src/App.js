@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import subscribe from './socket';
 
-import { getNews } from './API';
+import { getNews, submitEmailForUpdates } from './API';
 
 import Dashboard from './components/Dashboard';
 
@@ -23,7 +23,7 @@ class App extends Component {
     const { news } = this.state;
     return (
       <div className='App'>
-        <Dashboard news={news}/>
+        <Dashboard news={news} onSubmit={submitEmailForUpdates}/>
       </div>
     );
   }

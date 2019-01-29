@@ -13,7 +13,7 @@ const Tile = ({ headline, context }) => (
 
 class Dashboard extends Component {
   render() {
-    const { news } = this.props;
+    const { news, onSubmit } = this.props;
     return (
       <Grid celled>
         <Grid.Row>
@@ -32,7 +32,7 @@ class Dashboard extends Component {
             <Tile headline={'Sports'}/>
           </Grid.Column>
           <Grid.Column width={4}>
-            <Tile headline={'Subscribe For Updates'} context={<Subscribe/>}/>
+            <Tile headline={'Subscribe For Updates'} context={<Subscribe onSubmit={onSubmit}/>}/>
           </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -9,10 +9,10 @@ export const getNews = async () => {
   }
 };
 
-export const getWtf = () => async () => {
+export const submitEmailForUpdates = async (email) => {
   try{
-    const { data } = await axios.get('/news');
-    return data;
+    const response = await axios.post('/subscribe', { email });
+    return response;
   } catch(error){
     return {};
   }
