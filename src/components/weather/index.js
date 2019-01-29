@@ -8,7 +8,7 @@ class Weather extends Component {
     return(<div>
       <p>30C</p>
       <p>Beer Sheva</p>
-      <img src={sun} />
+      <img src={sun} alt='sun' />
       <div>last updated: {currentTime}</div>
     </div>);
   }

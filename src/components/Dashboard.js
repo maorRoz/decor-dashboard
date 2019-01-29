@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 import News from './news';
 import Weather from './weather';
+import Sports from './sports';
 import Subscribe from './subscribe';
 
 const Tile = ({ headline, context }) => (
@@ -13,7 +14,7 @@ const Tile = ({ headline, context }) => (
 
 class Dashboard extends Component {
   render() {
-    const { news, onSubmit } = this.props;
+    const { news, scores, onSubmit } = this.props;
     return (
       <Grid celled>
         <Grid.Row>
@@ -29,7 +30,7 @@ class Dashboard extends Component {
             <Tile headline={'Finance'}/>
           </Grid.Column>
           <Grid.Column width={5}>
-            <Tile headline={'Sports'}/>
+            <Tile headline={'Sports'} context={<Sports scores={scores}/>}/>
           </Grid.Column>
           <Grid.Column width={5}>
             <Tile headline={'Subscribe For Updates'} context={<Subscribe onSubmit={onSubmit} />}/>

@@ -17,8 +17,9 @@ socket.on('weatherUpdate', (finance) => {
   currentSubscriber.setState({ finance });
 });
 
-socket.on('sportsUpdate', (sports) => {
-  currentSubscriber.setState({ sports });
+socket.on('sportsUpdate', (scores) => {
+  console.log(scores);
+  currentSubscriber.setState({ scores });
 });
 
 const subscribe = (subscriber) => {

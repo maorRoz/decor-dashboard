@@ -6,7 +6,7 @@ const pathPrefix = '/weather';
 const { fetchCurrentWeather, fetchWeeklyWeather } = require('../../services/weatherService');
 
 router.get('/', (req, res) => {
-  const news = fetchNewestNews();
+  const news = fetchCurrentWeather();
   res.send(news);
 });
 

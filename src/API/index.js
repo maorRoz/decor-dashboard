@@ -9,6 +9,15 @@ export const getNews = async () => {
   }
 };
 
+export const getScores = async () => {
+  try{
+    const { data } = await axios.get('/sports');
+    return data;
+  } catch(error){
+    return {};
+  }
+};
+
 export const submitEmailForUpdates = async (email) => {
   try{
     const response = await axios.post('/subscribe', { email });
