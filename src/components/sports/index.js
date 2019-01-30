@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './sports.css';
 import _ from 'lodash';
-import { Image } from 'semantic-ui-react';
 import realMadridIcon from './realmadrid.png';
 import fcb from './fcb.png';
 
@@ -13,13 +12,13 @@ class Sports extends Component {
     return(
       <div className='sports'>
         <div className='teamIcon'>
-          <Image src={realMadridIcon} alt='realmadridicon' size='tiny' />
+          <img src={realMadridIcon} alt='realmadridicon'/>
         </div>
         <div className='scores'>
           <span>{team1Score} : {team2Score}</span>
         </div>
         <div className='teamIcon'>
-          <Image src={fcb} alt='fcb' size='tiny'/>
+          <img src={fcb} alt='fcb'/>
         </div>
       </div>
     );

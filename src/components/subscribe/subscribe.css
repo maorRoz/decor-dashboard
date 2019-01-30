@@ -22,3 +22,12 @@
 .shaker {
     animation: shake 0.3s;
 }
+
+.subscribe {
+  margin-top: 40px;
+  width: 150%;
+}
+
+.submit {
+  float: right;
+}

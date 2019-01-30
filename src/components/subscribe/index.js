@@ -3,11 +3,15 @@ import { Button, Form }from 'semantic-ui-react';
 import './subscribe.css';
 
 const SubscribeForm = ({ handleSubmit, handleChange, error }) => (
-  <Form onSubmit={handleSubmit}>
-    <Form.Input className={error ? 'shaker' : ''}
+  <div className='subscribe'>
+    <Form onSubmit={handleSubmit}>
+      <Form.Input className={error ? 'shaker' : ''}
       label='Email' error={error} placeholder='your@email.com' onChange={handleChange} />
-    <Button type='submit'>SEND</Button>
-  </Form>
+      <div className='submit'>
+        <Button primary type='submit'>SEND</Button>
+      </div>
+    </Form>
+  </div>
 );
 
 const Subscribed = () => {

@@ -1,19 +1,38 @@
-.weatherText div{
-    margin-top: 100px;
+.dailyWeather {
+    text-align: center;
 }
 
-.currentWeather div {
-    display: inline-block;
-    vertical-align:bottom;
+.day{
+    font-size: 150%;
+    font-weight: bold;
+}
+.dailyWeather span {
+    font-size: 300%;
 }
 
-.currentWeather p{
+.dailyWeather sup {
+    font-size:60%;
+}
+
+.weatherText p{
     margin-left: 50px;
-    margin-right: -50px;
+    font-weight: bold;
     font-size: 150%;
     margin-bottom:0;
 }
 
+.weatherText sup {
+    font-size: small;
+}
+.weatherText div{
+    margin-top: 40px;
+}
+
+.currentWeather div {
+    display: inline-block;
+}
+
 .currentWeather img{
     height: 200px;
+    margin-top:-70px;
 }

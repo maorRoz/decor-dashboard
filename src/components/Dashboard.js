@@ -19,21 +19,21 @@ class Dashboard extends Component {
     return (
       <Grid celled>
         <Grid.Row>
-          <Grid.Column width={4}>
+          <Grid.Column width={6}>
             <Tile headline={'News Update'} context={<News news={news}/>}/>
           </Grid.Column>
-          <Grid.Column width={6}>
+          <Grid.Column width={4}>
             <Tile headline={'Weather'} context={<Weather weather={weather}/>}/>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column width={4}>
+          <Grid.Column width={6}>
             <Tile headline={'Finance'} context={<Finance financeData={finance}/>}/>
           </Grid.Column>
           <Grid.Column width={4}>
             <Tile headline={'Sports'} context={<Sports scores={scores}/>}/>
           </Grid.Column>
-          <Grid.Column width={6}>
+          <Grid.Column width={4}>
             <Tile headline={'Subscribe For Updates'} context={<Subscribe onSubmit={onSubmit} />}/>
           </Grid.Column>
         </Grid.Row>

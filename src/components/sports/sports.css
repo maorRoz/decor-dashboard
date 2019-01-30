@@ -9,10 +9,12 @@
     font-size: 300%;
 }
 
-.scores span {
-    margin-bottom: 10px
-}
-
 .teamIcon {
     display: inline-block; 
+    margin-top: 30px;
+}
+
+.teamIcon img {
+    height: 50px;
+    width: 50px;
 }
